@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+        <meta charset="UTF-8">
+        <title>砰砰跳动的心</title>
+        <style>
+        body{
+                background:rgba(250,60,60,0.5);
+        }
+        div{
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                margin: 300px auto;
+                transform: rotate(45deg);
+                opacity: 0.5;
+                filter: drop-shadow(0px 0px 30px red);
+                box-shadow: 0px 0px 30px red;
+                animation: m 0.8s linear infinite;
+        }
+        @keyframes m{
+                50%{transform: rotate(45deg) scale(0.8,0.8);}
+
+                80%{transform: rotate(45deg) scale(0.7,0.7);}
+        }
+        div:after{
+                content: "";
+                width:200px;
+                height: 200px;
+                background-color:red;
+                position: relative;
+                display: block;
+                border-radius: 50%;
+                top: -300px;
+                left: 0px;
+        }
+        div:before{
+                content: "";
+                width:200px;
+                height: 200px;
+                background-color:red;
+                position: relative;
+                display: block;
+                border-radius: 50%;
+                top: 0px;
+                left: -100px;
+        }
+        p{
+                font-family:楷体;
+        }
+        </style>
+ </head>
+ <body>
+        <p>无人与我立黄昏，无人问我粥可温</p>
+        <div></div>
+ </body>
+ </html>
